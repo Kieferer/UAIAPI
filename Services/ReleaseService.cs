@@ -21,5 +21,9 @@ namespace UAIAPI.Services
             }
             return null;
         }
+        public int GetProjectCount()
+        {
+            return projectReleases.Count;
+        }
     }
 }

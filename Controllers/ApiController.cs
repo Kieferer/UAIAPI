@@ -21,14 +21,14 @@ namespace UAIAPI.Controllers
         public IActionResult SetUpdateData([FromBody] ReleaseDataDAO releaseDataDAO)
         {
             ReleaseData releaseData = new ReleaseDataBuilder()
-                .SetVersion(releaseDataDAO.Version)
-                .SetNotes(releaseDataDAO.Notes)
-                .SetPlatform(releaseDataDAO.Platforms)
+                .SetVersion(releaseDataDAO.version)
+                .SetNotes(releaseDataDAO.notes)
+                .SetPlatform(releaseDataDAO.platforms)
             .Build();
 
-            releaseService.SetOrUpdateRelease(releaseDataDAO.Name, releaseData);
+            releaseService.SetOrUpdateRelease(releaseDataDAO.name, releaseData);
 
-            string output = $"${releaseDataDAO.Name} is updated in the server with its latest (${releaseData.Version}) version." +
+            string output = $"${releaseDataDAO.name} is updated in the server with its latest (${releaseData.version}) version." +
                 $"Stored projects: ${releaseService.GetProjectCount()}";
 
             return Content(output, "text/plain");

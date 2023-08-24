@@ -2,17 +2,17 @@
 {
     public class ReleaseData
     {
-        public string Version { get; }
-        public string Notes { get; }
-        public DateTime PubDate { get; }
-        public Dictionary<string, PlatformData> Platforms { get; }
+        public string version { get; }
+        public string notes { get; }
+        public DateTime pub_date { get; }
+        public Dictionary<string, PlatformData> platforms { get; }
 
         public ReleaseData(string version, string notes, Dictionary<string, PlatformData> platforms)
         {
-            Version = version;
-            Notes = notes;
-            PubDate = DateTime.Now;
-            Platforms = platforms;
+            this.version = version;
+            this.notes = notes;
+            this.pub_date = DateTime.Now;
+            this.platforms = platforms;
         }
     }
 }

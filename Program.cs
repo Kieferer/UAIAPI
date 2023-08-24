@@ -1,3 +1,5 @@
+using UAIAPI.Services;
+
 namespace UAIAPI
 {
     public class Program
@@ -6,18 +8,13 @@ namespace UAIAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
+            builder.Services.AddSingleton<ReleaseService>();
             builder.Services.AddControllers();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
 
             app.MapControllers();
 

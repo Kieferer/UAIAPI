@@ -28,8 +28,8 @@ namespace UAIAPI.Controllers
 
             releaseService.SetOrUpdateRelease(releaseDataDAO.name, releaseData);
 
-            string output = $"${releaseDataDAO.name} is updated in the server with its latest (${releaseData.version}) version." +
-                $"Stored projects: ${releaseService.GetProjectCount()}";
+            string output = $"{releaseDataDAO.name} is updated in the server with its latest ({releaseData.version}) version." +
+                $"Stored projects: {releaseService.GetProjectCount()}";
 
             return Content(output, "text/plain");
         }

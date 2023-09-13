@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UAIAPI.Models;
-using UAIAPI.Services;
-
-namespace UAIAPITest
+﻿namespace UAIAPITest
 {
     internal class ReleaseServiceTests
     {

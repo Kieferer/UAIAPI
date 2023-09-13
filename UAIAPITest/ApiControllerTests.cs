@@ -1,14 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UAIAPI.Controllers;
-using UAIAPI.DAOs;
-using UAIAPI.Models;
-using UAIAPI.Services;
 
 namespace UAIAPITest
 {

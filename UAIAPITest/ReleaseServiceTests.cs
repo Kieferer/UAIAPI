@@ -24,5 +24,15 @@ namespace UAIAPITest
             releaseService = new ReleaseService();
             appReleaseData = new Dictionary<string, PlatformData>();
         }
+
+        [Test]
+        public void setOrUpdateReleaseTest()
+        {
+            var release = new ReleaseData(version, notes, appReleaseData);
+
+            releaseService.SetOrUpdateRelease(appName, release);
+
+            Assert.AreEqual(release, releaseService.GetReleaseData(appName));
+        }
     }
 }

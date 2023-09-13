@@ -29,7 +29,7 @@ namespace UAIAPI.Controllers
             releaseService.SetOrUpdateRelease(releaseDataDAO.name, releaseData);
 
             string output = $"{releaseDataDAO.name} is updated in the server with its latest ({releaseData.version}) version." +
-                $"Stored projects: {releaseService.GetProjectCount()}";
+                $" Currently {releaseService.GetProjectCount()} metadata of projects ({releaseService.GetProjectsName}) stored.";
 
             return Content(output, "text/plain");
         }
@@ -46,6 +46,17 @@ namespace UAIAPI.Controllers
 
             string serializedReleaseData = JsonConvert.SerializeObject(releaseData, Formatting.Indented);
             return Content(serializedReleaseData, "application/json");
+        }
+
+        [HttpGet("status")]
+        public IActionResult GetStatus()
+        {
+            string projects = releaseService.GetProjectsName();
+            int projectCount = releaseService.GetProjectCount();
+
+            string output = $"UAI-API is running and currently stores {projectCount} metadata of projects. ({projects}) For details of a release, send HTTP GET request to https://uai-api.azurewebsites.net/Api/update/(project-name)";
+
+            return Content(output, "text/plain");
         }
     }
 }

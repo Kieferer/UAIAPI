@@ -25,5 +25,18 @@ namespace UAIAPI.Services
         {
             return projectReleases.Count;
         }
+
+        public string GetProjectsName()
+        {
+            string projects = String.Empty;
+            foreach (string projectName in projectReleases.Keys) {
+                if (projects.Length > 0)
+                {
+                    projects += ", ";
+                }
+                projects += projectName;
+            }
+            return projects;
+        }
     }
 }

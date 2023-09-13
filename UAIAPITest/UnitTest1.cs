@@ -1,3 +1,5 @@
+using UAIAPI.Models;
+
 namespace UAIAPITest
 {
     public class Tests
@@ -7,5 +9,7 @@ namespace UAIAPITest
         readonly string signature = "testSig";
         readonly string url = "testURL";
         readonly string platform = "testPlatform";
+
+        Dictionary<string, PlatformData> appReleaseData;
     }
 }

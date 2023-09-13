@@ -41,5 +41,16 @@ namespace UAIAPITest
             Assert.IsInstanceOf<ContentResult>(result);
             mockReleaseService.Verify(service => service.SetOrUpdateRelease(It.IsAny<string>(), It.IsAny<ReleaseData>()), Times.Once);
         }
+
+        [Test]
+        public void TestGetUpdateData()
+        {
+            mockReleaseService.Setup(service => service.GetReleaseData(appName)).Returns(new ReleaseData(version, notes, appReleaseData));
+
+            var result = apiController.GetUpdateData(appName);
+
+            Assert.IsInstanceOf<ContentResult>(result);
+            mockReleaseService.Verify(service => service.GetReleaseData(appName), Times.Once);
+        }
     }
 }

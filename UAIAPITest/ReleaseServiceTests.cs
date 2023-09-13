@@ -32,7 +32,7 @@ namespace UAIAPITest
 
             releaseService.SetOrUpdateRelease(appName, release);
 
-            Assert.AreEqual(release, releaseService.GetReleaseData(appName));
+            Assert.That(releaseService.GetReleaseData(appName), Is.EqualTo(release));
         }
 
         [Test]
@@ -42,7 +42,7 @@ namespace UAIAPITest
 
             releaseService.SetOrUpdateRelease(appName, release);
 
-            Assert.AreEqual(1, releaseService.GetProjectCount());
+            Assert.That(releaseService.GetProjectCount(), Is.EqualTo(1));
         }
     }
 }

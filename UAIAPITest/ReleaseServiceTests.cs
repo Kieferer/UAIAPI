@@ -38,11 +38,15 @@ namespace UAIAPITest
         [Test]
         public void getProjectCountTest()
         {
+            string differentAppName = "differentTestAppName";
+
             var release = new ReleaseData(version, notes, appReleaseData);
 
             releaseService.SetOrUpdateRelease(appName, release);
+            releaseService.SetOrUpdateRelease(differentAppName, release);
+            releaseService.SetOrUpdateRelease(appName, release);
 
-            Assert.That(releaseService.GetProjectCount(), Is.EqualTo(1));
+            Assert.That(releaseService.GetProjectCount(), Is.EqualTo(2));
         }
     }
 }

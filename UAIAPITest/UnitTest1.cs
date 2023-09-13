@@ -43,28 +43,28 @@ namespace UAIAPITest
         public void platformDataTest()
         {
             Assert.That(platformData.Signature, Is.EqualTo(signature));
-            Assert.AreEqual(url, platformData.Url);
+            Assert.That(platformData.Url, Is.EqualTo(url));
         }
         [Test]
         public void releaseDataTest()
         {
-            Assert.AreEqual(version, releaseData.Version);
-            Assert.AreEqual(notes, releaseData.Notes);
-            Assert.AreEqual(appReleaseData, releaseData.Platforms);
+            Assert.That(releaseData.Version, Is.EqualTo(version));
+            Assert.That(releaseData.Notes, Is.EqualTo(notes));
+            Assert.That(releaseData.Platforms, Is.EqualTo(appReleaseData));
         }
 
         [Test]
         public void platformDataFromBuilderTest()
         {
-            Assert.AreEqual(signature, platformDataFromBuilder.Signature);
-            Assert.AreEqual(url, platformDataFromBuilder.Url);
+            Assert.That(platformDataFromBuilder.Signature, Is.EqualTo(signature));
+            Assert.That(platformDataFromBuilder.Url, Is.EqualTo(url));
         }
         [Test]
         public void releaseDataFromBuilderTest()
         {
-            Assert.AreEqual(version, releaseDataFromBuilder.Version);
-            Assert.AreEqual(notes, releaseDataFromBuilder.Notes);
-            Assert.AreEqual(appReleaseData, releaseDataFromBuilder.Platforms);
+            Assert.That(releaseDataFromBuilder.Version, Is.EqualTo(version));
+            Assert.That(releaseDataFromBuilder.Notes, Is.EqualTo(notes));
+            Assert.That(releaseDataFromBuilder.Platforms, Is.EqualTo(appReleaseData));
         }
     }
 }

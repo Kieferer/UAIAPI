@@ -13,10 +13,10 @@ namespace UAIAPITest
 
         Dictionary<string, PlatformData> appReleaseData;
 
-        PlatformData platformData;
-        PlatformData platformDataFromBuilder;
-        ReleaseData releaseData;
-        ReleaseData releaseDataFromBuilder;
+        PlatformData? platformData;
+        PlatformData? platformDataFromBuilder;
+        ReleaseData? releaseData;
+        ReleaseData? releaseDataFromBuilder;
 
         [SetUp]
         public void Setup()

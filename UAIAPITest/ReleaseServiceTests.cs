@@ -11,6 +11,10 @@ namespace UAIAPITest
     {
         private ReleaseService releaseService;
 
+        readonly string appName = "testAppName";
+        readonly string version = "testVersion";
+        readonly string notes = "testNotes";
+
         [SetUp]
         public void Setup()
         {

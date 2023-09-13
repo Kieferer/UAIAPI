@@ -9,11 +9,11 @@ namespace UAIAPI.Services
         {
             projectReleases = new Dictionary<string, ReleaseData>();
         }
-        public void SetOrUpdateRelease(string name,  ReleaseData release)
+        public virtual void SetOrUpdateRelease(string name,  ReleaseData release)
         {
             projectReleases[name] = release;
         }
-        public ReleaseData? GetReleaseData(string projectName)
+        public virtual ReleaseData? GetReleaseData(string projectName)
         {
             if (projectReleases.TryGetValue(projectName, out ReleaseData? releaseData))
             {

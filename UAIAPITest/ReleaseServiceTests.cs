@@ -26,7 +26,7 @@ namespace UAIAPITest
         }
 
         [Test]
-        public void setOrUpdateReleaseTest()
+        public void SetOrUpdateReleaseTest()
         {
             var release = new ReleaseData(version, notes, appReleaseData);
 
@@ -36,7 +36,7 @@ namespace UAIAPITest
         }
 
         [Test]
-        public void getProjectCountTest()
+        public void GetProjectCountTest()
         {
             string differentAppName = "differentTestAppName";
 

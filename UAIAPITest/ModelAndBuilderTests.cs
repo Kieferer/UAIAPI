@@ -25,14 +25,14 @@ namespace UAIAPITest
         }
 
         [Test]
-        public void platformDataTest()
+        public void PlatformDataContuctorTest()
         {
             platformData = new PlatformData(signature, url);
             Assert.That(platformData.Signature, Is.EqualTo(signature));
             Assert.That(platformData.Url, Is.EqualTo(url));
         }
         [Test]
-        public void releaseDataTest()
+        public void ReleaseDataContuctorTest()
         {
             releaseData = new ReleaseData(version, notes, appReleaseData);
             Assert.That(releaseData.Version, Is.EqualTo(version));
@@ -41,7 +41,7 @@ namespace UAIAPITest
         }
 
         [Test]
-        public void platformDataFromBuilderTest()
+        public void PlatformDataBuilderContuctorTest()
         {
             platformDataFromBuilder = new PlatformDataBuilder()
                 .SetSignature(signature)
@@ -52,7 +52,7 @@ namespace UAIAPITest
             Assert.That(platformDataFromBuilder.Url, Is.EqualTo(url));
         }
         [Test]
-        public void releaseDataFromBuilderTest()
+        public void ReleaseDataBuilderContuctorTest()
         {
             releaseDataFromBuilder = new ReleaseDataBuilder()
                 .SetVersion(version)

@@ -32,7 +32,7 @@ namespace UAIAPITest
         }
 
         [Test]
-        public void TestSetUpdateData()
+        public void SetUpdateDataTest()
         {
             var releaseDataDAO = new ReleaseDataDAO(appName, version, notes, appReleaseData);
 
@@ -43,7 +43,7 @@ namespace UAIAPITest
         }
 
         [Test]
-        public void TestGetUpdateData()
+        public void GetUpdateDataTest()
         {
             mockReleaseService.Setup(service => service.GetReleaseData(appName)).Returns(new ReleaseData(version, notes, appReleaseData));
 

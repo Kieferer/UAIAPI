@@ -2,13 +2,13 @@
 {
     public class PlatformData
     {
-        public string Signature { get; }
-        public string Url { get; }
+        public string signature { get; }
+        public string url { get; }
 
         public PlatformData(string signature, string url)
         {
-            Signature = signature;
-            Url = url;
+            this.signature = signature;
+            this.url = url;
         }
     }
 }

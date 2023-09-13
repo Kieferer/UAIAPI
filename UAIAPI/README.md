@@ -1,4 +1,5 @@
 # UAI-API
+![Build & Deploy Status](https://github.com/kieferer/uaiapi/actions/workflows/UAI-API.yml/badge.svg)
 ### Universal Auto-update Intermediary API
 
 Usage and planned features

@@ -38,5 +38,33 @@ namespace UAIAPITest
                 .AddPlatform(platform, platformData)
                 .Build();
         }
+
+        [Test]
+        public void platformDataTest()
+        {
+            Assert.That(platformData.Signature, Is.EqualTo(signature));
+            Assert.AreEqual(url, platformData.Url);
+        }
+        [Test]
+        public void releaseDataTest()
+        {
+            Assert.AreEqual(version, releaseData.Version);
+            Assert.AreEqual(notes, releaseData.Notes);
+            Assert.AreEqual(appReleaseData, releaseData.Platforms);
+        }
+
+        [Test]
+        public void platformDataFromBuilderTest()
+        {
+            Assert.AreEqual(signature, platformDataFromBuilder.Signature);
+            Assert.AreEqual(url, platformDataFromBuilder.Url);
+        }
+        [Test]
+        public void releaseDataFromBuilderTest()
+        {
+            Assert.AreEqual(version, releaseDataFromBuilder.Version);
+            Assert.AreEqual(notes, releaseDataFromBuilder.Notes);
+            Assert.AreEqual(appReleaseData, releaseDataFromBuilder.Platforms);
+        }
     }
 }

@@ -25,16 +25,16 @@ namespace UAIAPITest
         public void PlatformDataContuctorTest()
         {
             platformData = new PlatformData(signature, url);
-            Assert.That(platformData.Signature, Is.EqualTo(signature));
-            Assert.That(platformData.Url, Is.EqualTo(url));
+            Assert.That(platformData.signature, Is.EqualTo(signature));
+            Assert.That(platformData.url, Is.EqualTo(url));
         }
         [Test]
         public void ReleaseDataContuctorTest()
         {
             releaseData = new ReleaseData(version, notes, appReleaseData);
-            Assert.That(releaseData.Version, Is.EqualTo(version));
-            Assert.That(releaseData.Notes, Is.EqualTo(notes));
-            Assert.That(releaseData.Platforms, Is.EqualTo(appReleaseData));
+            Assert.That(releaseData.version, Is.EqualTo(version));
+            Assert.That(releaseData.notes, Is.EqualTo(notes));
+            Assert.That(releaseData.platforms, Is.EqualTo(appReleaseData));
         }
 
         [Test]
@@ -45,8 +45,8 @@ namespace UAIAPITest
                 .SetUrl(url)
                 .Build();
 
-            Assert.That(platformDataFromBuilder.Signature, Is.EqualTo(signature));
-            Assert.That(platformDataFromBuilder.Url, Is.EqualTo(url));
+            Assert.That(platformDataFromBuilder.signature, Is.EqualTo(signature));
+            Assert.That(platformDataFromBuilder.url, Is.EqualTo(url));
         }
         [Test]
         public void ReleaseDataBuilderContuctorTest()
@@ -58,9 +58,9 @@ namespace UAIAPITest
                 .AddPlatform(platform, platformData)
                 .Build();
 
-            Assert.That(releaseDataFromBuilder.Version, Is.EqualTo(version));
-            Assert.That(releaseDataFromBuilder.Notes, Is.EqualTo(notes));
-            Assert.That(releaseDataFromBuilder.Platforms, Is.EqualTo(appReleaseData));
+            Assert.That(releaseDataFromBuilder.version, Is.EqualTo(version));
+            Assert.That(releaseDataFromBuilder.notes, Is.EqualTo(notes));
+            Assert.That(releaseDataFromBuilder.platforms, Is.EqualTo(appReleaseData));
         }
     }
 }

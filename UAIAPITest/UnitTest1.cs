@@ -11,5 +11,10 @@ namespace UAIAPITest
         readonly string platform = "testPlatform";
 
         Dictionary<string, PlatformData> appReleaseData;
+
+        PlatformData platformData;
+        PlatformData platformDataFromBuilder;
+        ReleaseData releaseData;
+        ReleaseData releaseDataFromBuilder;
     }
 }

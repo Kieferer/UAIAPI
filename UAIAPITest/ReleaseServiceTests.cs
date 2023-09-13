@@ -34,5 +34,15 @@ namespace UAIAPITest
 
             Assert.AreEqual(release, releaseService.GetReleaseData(appName));
         }
+
+        [Test]
+        public void getProjectCountTest()
+        {
+            var release = new ReleaseData(version, notes, appReleaseData);
+
+            releaseService.SetOrUpdateRelease(appName, release);
+
+            Assert.AreEqual(1, releaseService.GetProjectCount());
+        }
     }
 }
